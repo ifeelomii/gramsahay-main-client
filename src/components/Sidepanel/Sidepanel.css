@@ -1,0 +1,9 @@
+.sidepanel-nav-menu{
+    text-decoration: none;
+}
+
+ul > li{
+    list-style: none;
+    margin-left: 2px;
+    line-height: 4rem;
+}

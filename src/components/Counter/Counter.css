@@ -1,0 +1,39 @@
+.section-work-data {
+    text-align: center;
+    background: -webkit-linear-gradient(0deg,
+            rgb(132 144 255)0%,
+            rgb(98 189 252)100%);
+    transition: all 0.7s linear;
+    color: #fff;
+}
+
+.counter-numbers {
+    font-size: 4.8rem;
+}
+
+.section-work-data {
+    border-radius: 20px;
+}
+.section-work-data p {
+    border-radius: 20px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.grid {
+    display: grid;
+    gap: 9rem;
+}
+
+.section-container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+}

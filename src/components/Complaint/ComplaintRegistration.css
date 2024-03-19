@@ -1,0 +1,73 @@
+#main-complaint-reg-div{
+    display: grid;
+    margin: auto;
+    min-height: 71.6vh;
+}
+#complaint-reg{
+    text-align: center;
+}
+#req-symbol{
+    color: red;
+}
+#complaint-reg-header {
+    margin:5px ;
+}
+#complaint-reg-form {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout by default */
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+#last-line{
+    margin: 10px;
+}
+#input-group {
+  margin: 8px;
+  display: flex;
+  flex-wrap: wrap; /* Wrap input groups to the next line if needed */
+  align-items: center;
+}
+
+
+#input-group > label {
+  margin: 8px;
+  width: calc(50% - 20px); 
+}
+#input-group > label > textarea {
+  width: calc(414%); 
+}
+
+#btn-group {
+  display: flex;
+  flex-wrap: wrap; /* Wrap buttons to the next line if needed */
+  justify-content: space-evenly;
+}
+
+#reset:hover{
+  background-color: azure;
+}
+
+#seperator{
+  margin-bottom: 10px;
+}
+
+#btn-group > button {
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* Media query for tablet screens */
+@media only screen and (min-width: 768px) {
+  #input-group > label {
+    width: calc(33.33% - 20px); /* Each input field takes up one-third of the container width with some margin */
+  }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
+  #input-group > label {
+    width: calc(25% - 20px); /* Each input field takes up one-fourth of the container width with some margin */
+  }
+}

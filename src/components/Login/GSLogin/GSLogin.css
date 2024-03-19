@@ -1,0 +1,62 @@
+/* GramsevakLogin.css */
+.gramsevak-login-container {
+  max-width: 400px;
+  max-height: 100vh;
+  margin: 5% auto auto auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.gramsevak-login-container {
+  min-height: 52.8vh;
+}
+.gramsevak-login-container h2 {
+  margin-bottom: 20px;
+}
+#gs-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#gs-register {
+  text-decoration: none;
+  color: #0056b3;
+}
+.gramsevak-login-error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+#submit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+}
+
+#bottom-seperator {
+  margin-bottom: 55px;
+}

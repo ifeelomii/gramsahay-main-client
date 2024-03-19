@@ -1,0 +1,33 @@
+thead > tr > th{
+    text-align: center;
+    margin-top:2px ;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+tbody > tr > td{
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
+
+#display-comp-wrapper{
+    display: grid;
+    justify-content: center;
+}
+#display-comp-wrapper > link > button{
+    justify-content: center;
+}
+
+#action-comp-btn{
+    text-decoration: none;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin: 3px;
+}
+
+/* CSS FOR ShowComplaint.jsx */
+#desc{
+    min-width: fit-content;
+    max-width: 200px;
+}

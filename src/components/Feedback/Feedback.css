@@ -1,0 +1,38 @@
+.section-freelancing {
+    background-image: url('/public/images/complaints.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    position: relative;
+    transition: all 0.7s linear;
+    text-align: center;
+}
+
+
+.section-freelancing .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    opacity: 0.7;
+}
+
+.section-freelancing .container {
+    position: relative;
+}
+
+.section-freelancing h2 {
+    font-size: 5.4rem;
+}
+
+.section-freelancing span {
+    color: #a0f669;
+}
+
+.section-freelancing h2,
+.section-freelancing p {
+    color: var(--white);
+    /* margin-bottom: 1.8rem; */
+}

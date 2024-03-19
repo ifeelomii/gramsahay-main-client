@@ -1,0 +1,123 @@
+.banner {
+    margin: 8px 0 3px 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative ;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animate 16s ease-in-out infinite;
+    background-size: cover;
+    opacity: 95%;
+}
+
+.outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.banner-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner h1 {
+    font-size: 72px;
+    font-family: 'Cinzel', serif;
+    color: #6ae2e4;
+    text-align: center;
+    text-shadow: 3px 2px #232323;
+}
+
+.banner h1 span {
+    color: #ffd800;
+    font-family: 'Cinzel', serif;
+}
+
+.banner h1:hover {
+    color: #ffd800;
+}
+
+
+
+.banner p {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 5px 5px 5px;
+}
+
+#span-1 {
+    color: #6ae2e4;
+}
+
+#span-2 {
+    color: #ffd800;
+}
+
+
+.banner a {
+    margin: 5px;
+    border-bottom: 2px solid rgb(95, 194, 166);
+    padding: 7px 7px 7px 0px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.banner a:hover {
+    color: #ffd800;
+}
+
+.banner button {
+    padding: 15px 25px;
+    color: #232323;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.banner button:hover {
+    background-color: #ffffff;
+    color: #232323;
+}
+
+@keyframes animate {
+    0%,100% {
+        background-image: url('../../../public/images/savewater.jpg');
+        transition: 3s all ease;
+    }
+
+    20% {
+        background-image: url('../../../public/images/edu1.jpg');
+        transition: 3s all ease;
+    }
+
+    40% {
+        background-image: url('../../../public/images/vil3.jpg');
+        transition: 3s all ease;
+    }
+
+    60% {
+        background-image: url('../../../public/images/edu2.jpg');
+        transition: 3s all ease;
+    }
+
+    80% {
+        background-image: url('../../../public/images/vil2.jpg');
+        transition: 3s all ease;
+    }
+}

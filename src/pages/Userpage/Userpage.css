@@ -1,0 +1,94 @@
+/* CSS FOR AllUsers.jsx  */
+
+thead > tr > th{
+    text-align: center;
+    margin-top:2px ;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+tbody > tr > td{
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
+
+#display-user-wrapper{
+    display: grid;
+    justify-content: center;
+}
+#display-user-wrapper > link > button{
+    justify-content: center;
+}
+
+#action-user-btn{
+    text-decoration: none;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin: 3px;
+}
+
+/* CSS FOR ShowUser.jsx */
+
+#info-card{
+    display: flex;
+    margin: 6px 0;
+}
+
+.info-card-title{
+    display: grid;
+    justify-content: center;
+}
+
+#info-seperator{
+    margin-bottom: 15px;
+}
+
+.info-card-body{
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    max-width: 500px;
+}
+
+#user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+}
+#user-info p{
+    font-size: 1.5rem;
+}
+
+/* CSS FOR EditUser.jsx */
+
+.outer-edit-user-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-container{
+    min-height: 70vh;
+}
+
+.inner-edit-user-container{
+    min-width: 600px;
+    margin: 10px;
+}
+#input-group {
+  margin: 8px;
+  display: flex;
+  flex-wrap: wrap; /* Wrap input groups to the next line if needed */
+  align-items: center;
+}
+
+#input-group > label {
+  margin: 8px;
+}
+
+.label > label{
+    min-width: 210px;
+}

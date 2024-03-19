@@ -1,0 +1,28 @@
+.hero-section-container{
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+.grid {
+    display: grid;
+    gap: 4rem;
+}
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bio-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-image img {
+    width: 100%;
+}

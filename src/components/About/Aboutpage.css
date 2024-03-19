@@ -1,0 +1,18 @@
+.about-page {
+  padding: 20px;
+}
+
+.about-page .about-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-page p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#list li{
+  list-style-type: circle;
+}

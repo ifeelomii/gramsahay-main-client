@@ -1,0 +1,63 @@
+  #logo{
+    height: 100px;
+  }
+
+  nav{
+    color: rgb(218, 209, 209);
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    width: 100%;
+    position: sticky;
+    padding: 0 6rem;
+    z-index: 100;
+    color:rgb(97, 95, 95);
+  }
+  
+  
+  .nav__logo {
+    transition: all 0.3s;
+  }
+  
+  .nav__links {
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  .nav__link:hover{
+    cursor: pointer;
+  }
+  
+
+  #btn-menu{
+    font-size: 1rem;
+    color:rgb(97, 95, 95);
+    margin-left: 5px;
+    border: none ;
+  }
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    display: block;
+  }
+
+ .line{
+  display: flex;
+  border: 1px solid black;
+ }
+
+li > a{
+  color: black;
+ }
+
+ #burger{
+  font-size: x-large;
+  font-weight: 900;
+ }

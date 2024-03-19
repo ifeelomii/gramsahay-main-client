@@ -1,0 +1,94 @@
+thead > tr > th{
+    text-align: center;
+    margin-top:2px ;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+tbody > tr > td{
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
+
+.display-admin-wrapper{
+    min-height: 73vh;
+}
+#display-admin-wrapper > link > button{
+    justify-content: center;
+}
+
+#action-admin-btn{
+    text-decoration: none;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin: 3px;
+}
+
+/* CCS FOR AddAdmin.jsx */
+#admin-reg-page{
+    min-height: 71.6vh;
+}
+
+/* CSS FOR ShowAdmin.jsx */
+#info-card{
+    display: flex;
+    margin: 6px 0;
+}
+
+.info-card-title{
+    display: grid;
+    justify-content: center;
+}
+
+#info-seperator{
+    margin-bottom: 15px;
+}
+
+.info-card-body{
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    max-width: 500px;
+}
+
+.card{
+    min-height: 71.6vh;
+}
+
+#admin-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+#count-cards{
+    display: flex;
+    min-height: 15vh;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#count-cards>div{
+    /* border: 2px solid red; */
+    padding: 20px 30px;
+    background-color: grey;
+    border-radius: 10px;
+}
+#count-cards>div>span{
+    /* border: 2px solid blue; */
+    background-color: rgba(0, 191, 255, 0.447);
+    margin-left: 10px;
+    border-radius: 50%;
+    padding: 18px 30px;
+}
+
+#logout{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 3px;
+}

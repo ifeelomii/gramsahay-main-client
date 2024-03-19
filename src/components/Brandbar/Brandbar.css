@@ -1,0 +1,11 @@
+#contain{
+    height: 30px;
+    padding-top: 8px;
+    background-color: rgba(226, 226, 226,0.5);
+}
+
+#line{
+    display: flex;
+    border: 1px solid black;
+    
+}
