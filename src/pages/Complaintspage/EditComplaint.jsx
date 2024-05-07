@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import "./Complaintspage.css";
 import moment from "moment";
 import ComplaintService from "../../services/ComplaintService";
 import UserService from "../../services/UserService";
 import emailjs from "@emailjs/browser";
 
-const EditComplaint = () => {
   const form = useRef();
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
-    emailId: ""
+    emailId: "",
+    username:""
   });
   const location = useLocation();
   const params = useParams();
@@ -30,13 +30,14 @@ const EditComplaint = () => {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setformdetails({ ...location.state.data });
     let id = location.state.data.userId;
     // console.log(id);
     fetchdata(id);
     // console.log("formdetails: " + formdetails);
   }, []);
-
+  
   const fetchdata = (id) => {
     UserService.getUserById(id)
       .then((response) => {
@@ -45,7 +46,7 @@ const EditComplaint = () => {
         setUser(response.data);
       })
       .catch((error) => {
-        alert(`Error! ${error.message}`);
+        console.log(`Error! ${error.message}`);
       });
   };
 
@@ -55,6 +56,7 @@ const EditComplaint = () => {
     //     publicKey: "7jsJ0mN4RfOmhmwri",
     //     to_email: user.emailId
     //   })
+
     var templateParams = {
       from_name:'GramSahay',
       to_email: user.emailId,
@@ -132,7 +134,7 @@ const EditComplaint = () => {
               readOnly
             />
           </div>
-          <div className="form-group" id="input-group">
+          {/* <div className="form-group" id="input-group">
              <label>User Id:</label>
             <input
               type="text"
@@ -148,8 +150,8 @@ const EditComplaint = () => {
               }}
               readOnly
             />
-          </div> 
-          <div className="form-group" id="input-group">
+          </div>  */}
+          {/* <div className="form-group" id="input-group">
             <label>Email Id:</label>
             <input
               type="email"
@@ -164,7 +166,7 @@ const EditComplaint = () => {
               }}
               readOnly
             />
-          </div>
+          </div> */}
           <div className="form-group" id="input-group">
             <label>Category:</label>
             <input
@@ -281,19 +283,6 @@ const EditComplaint = () => {
               }}
             />
           </div>
-          {/* <div className="form-group label" id="input-group">
-            <label htmlFor="dob">Status:</label>
-            <input
-              type="text"
-              className="form-control col-md-12"
-              id="status"
-              name="status"
-              value={formdetails.status}
-              onChange={(event) => {
-                setformdetails({ ...formdetails, status: event.target.value });
-              }}
-            />
-          </div> */}
           <div className="form-group label" id="input-group">
             <label htmlFor="status">Status:</label>
             <select
@@ -310,14 +299,27 @@ const EditComplaint = () => {
               <option value="completed">Completed</option>
             </select>
           </div>
-          <button
-            type="button"
-            className="btn btn-primary rounded-pill"
-            id="input-group"
-            onClick={updategs}
-          >
-            Update Gramsevak
-          </button>
+          <div className="input-group">
+            <button
+              type="button"
+              className="btn btn-primary rounded-pill"
+              id="input-group"
+              onClick={updategs}
+            >
+              Update Gramsevak
+            </button>
+
+            <Link to={`/gramsevaks/dashboard/${user.username}`}>
+              <button
+                type="button"
+                name="back-btn"
+                className="btn btn-primary rounded-pill"
+                id="input-group"
+              >
+                Go Back
+              </button>
+            </Link>
+          </div>
         </form>
       </div>
     </div>

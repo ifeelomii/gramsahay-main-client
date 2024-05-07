@@ -1,5 +1,5 @@
 // AdminLogin.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AdminLogin.css";
 import { useNavigate } from "react-router-dom";
 import LoginService from "../../../services/LoginService";
@@ -9,6 +9,10 @@ const AdminLogin = () => {
   const [formdata, setFormdata] = useState({ username: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
 
   const handleLogin = (e) => {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./UserLogin.css";
 import { Link, useNavigate } from "react-router-dom";
 import LoginService from "../../../services/LoginService";
@@ -7,6 +7,9 @@ const UserLogin = () => {
   const [formdata, setFormdata] = useState({ username: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();

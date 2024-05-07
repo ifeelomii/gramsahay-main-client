@@ -1,4 +1,5 @@
 // import { MainFooter } from "../Footer/MainFooter";
+import { useEffect } from "react";
 import "./LoginSection.css";
 const { Link, useNavigate } = require("react-router-dom");
 
@@ -6,6 +7,9 @@ const { Link, useNavigate } = require("react-router-dom");
 const LoginSection = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   // const handleClick = () => {
   //   console.log("hiiiii");
   //   navigate("/login/user");

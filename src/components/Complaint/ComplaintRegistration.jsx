@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import swal from "sweetalert";
 import "./ComplaintRegistration.css";
-import axios from "axios";
 import ComplaintService from "../../services/ComplaintService";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import UserService from "../../services/UserService";
 const ComplaintRegistration = () => {
   const navigate = useNavigate();
   const params = useParams();
@@ -19,7 +20,7 @@ const ComplaintRegistration = () => {
     taluka: "",
     village: ""
   });
-
+  const [userName, setUserName] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
@@ -32,29 +33,48 @@ const ComplaintRegistration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      ComplaintService.addComplaint(formData);
-      setSuccess(true);
-      setError("");
-      setFormData({
-        username: "",
-        userid: `${params.id}`,
-        category: "",
-        description: "",
-        forGS: "1", //for GS or not
-        forAdmin: "0", //for Admin or not
-        status: "new",
-        state: "Maharashtra",
-        district: "",
-        taluka: "",
-        village: ""
-      });
-    } catch (error) {
-      setError("Failed to register user. Please try again.");
-      console.error("Error registering user:", error);
+      ComplaintService.addComplaint(formData)
+        .then((res) => {
+        
+          setSuccess(true);
+          setError("");
+          setFormData({
+            username: "",
+            userid: `${params.id}`,
+            category: "",
+            description: "",
+            forGS: "1", //for GS or not
+            forAdmin: "0", //for Admin or not
+            status: "new",
+            state: "Maharashtra",
+            district: "",
+            taluka: "",
+            village: ""
+          });
+          setTimeout(() => {
+            swal("Complaint registered successfully");
+            navigate(`/users/dashboard/${userName}`);
+          }, 2000);
+        })
+        .catch((error) => {
+          setError("Failed to register user. Please try again.");
+          console.error("Error registering user:", error);
+        })
+      } catch (error) {
+        setError("Failed to register user. Please try again.");
+        console.error("Error registering user:", error);
+      }
     }
-    console.log(formData);
-  };
-
+  
+useEffect(() => {
+  UserService.getUserById(params.id)
+    .then((res) => {
+      setUserName(res.data.username)
+    })
+    .catch(() => {
+      setError("Failed to register user. Please try again.");
+    })
+})
   return (
     <div id="main-complaint-reg-div">
       <h2 id="complaint-reg">Complaint Registration</h2>

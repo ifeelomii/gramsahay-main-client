@@ -49,14 +49,14 @@ const MainFooter = () => {
                   Login
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <span>
                   <ion-icon name="caret-forward-outline"></ion-icon>
                 </span>
                 <Link to="/feedback" id="mr-lf">
                   Feedback
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

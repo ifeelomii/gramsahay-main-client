@@ -58,7 +58,7 @@ const NewComplaints = () => {
               <th scope="col">Taluka</th>
               <th scope="col">Village</th>
               <th scope="col">Status</th>
-              <th scope="col">Remarks</th>
+              {/* <th scope="col">Remarks</th> */}
               {/* <th
                 scope="col"
                 style={{
@@ -113,7 +113,7 @@ const NewComplaints = () => {
                 <td>{ob.taluka ? ob.taluka : "null"}</td>
                 <td>{ob.village ? ob.village : "null"}</td>
                 <td>{ob.status ? ob.status : "null"}</td>
-                <td>{ob.remarks ? ob.remarks : "none"}</td>
+                {/* <td>{ob.remarks ? ob.remarks : "none"}</td> */}
                 {/* <td>
                   <button
                     type="button"

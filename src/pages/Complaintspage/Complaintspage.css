@@ -31,3 +31,7 @@ tbody > tr > td{
     min-width: fit-content;
     max-width: 200px;
 }
+
+button{
+    text-decoration: none;
+}

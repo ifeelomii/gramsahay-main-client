@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Banner from "../../components/Banner/Banner";
 import Counter from "../../components/Counter/Counter";
 import HeroSection from "../../components/HeroSection/HeroSection";
 
 const Landingpage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <div className="container" style={{ display: "block" }}>
